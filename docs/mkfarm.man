@@ -1,0 +1,46 @@
+.TH mkfarm 6
+
+.SH NAME
+mkfarm \- create a farm
+
+.SH SYNOPSIS
+\fBmkfarm\fR [\fIOPTION\fR...] [\fB\-o\fR] \fIFILE\fR
+
+.SH DESCRIPTION
+Create a new farm.
+
+.SH OPTIONS
+.TP
+\fB\-\-help\fR
+Displays the usage information.
+.TP
+\fB\-\-version\fR
+Displays the version and license information.
+.TP
+\fB\-d\fR, \fB\-\-difficulty\fR \fILEVEL\fR
+Set the difficulty to one of the following:
+.RS
+.TP
+\fBe\fR, \fBez\fR, \fBeasy\fR
+Easy
+.TP
+\fBn\fR, \fBnorm\fR, \fBnormal\fR, \fBm\fR, \fBmed\fR, \fBmedium\fR
+Normal
+.TP
+\fBh\fR, \fBhard\fR
+Hard
+.RE
+.TP
+\fB\-o\fR, \fB\-\-output\fR \fIFILE\fR
+Set output file.
+
+.SH EXIT STATUS
+.TP
+\fB0\fR
+Success.
+.TP
+\fB1\fR
+An error occurred.
+
+.SH COPYRIGHT
+Licensed under the GNU General Public License version 3.0

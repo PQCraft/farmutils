@@ -1,0 +1,55 @@
+.TH farmmrkt 6
+
+.SH NAME
+farmmrkt \- interact with the farmer's market
+
+.SH SYNOPSIS
+\fBfarmmrkt\fR [\fIOPTION\fR...] \fIFILE\fR \fICOMMAND\fR \fIARGS\fR
+
+.SH DESCRIPTION
+Buy items and seeds, and put up items and crops for sale on the farmer's market.
+
+.SH OPTIONS
+.TP
+\fB\-\-help\fR
+Displays the usage information.
+.TP
+\fB\-\-version\fR
+Displays the version and license information.
+
+.SH COMMANDS
+.TP
+\fBbuy\-item\fR \fINAME\fR[:\fICOUNT\fR] [\fIFROM\fR]
+Buy items (from a specific seller if \fIFROM\fR is provided).
+.TP
+\fBbuy\-plant\fR \fINAME\fR[:\fICOUNT\fR] [\fIFROM\fR]
+Buy plants (from a specific seller if \fIFROM\fR is provided).
+.TP
+\fBbuy\-seeds\fR \fINAME\fR[:\fICOUNT\fR] [\fIFROM\fR]
+Buy seeds (from a specific seller if \fIFROM\fR is provided).
+.TP
+\fBlist\-items\fR [\fINAME\fR]
+Show all the items available on the market, or if a name is given, list all sellers for it.
+.TP
+\fBlist\-plants\fR [\fINAME\fR]
+Show all the plants available on the market, or if a name is given, list all sellers for it.
+.TP
+\fBlist\-seeds\fR [\fINAME\fR]
+Show all the seeds available on the market, or if a name is given, list all sellers for it.
+.TP
+\fBsell\-crops\fR \fINAME\fR[:\fICOUNT\fR] \fIPRICE_PER\fR
+Put harvested crops up for sale on the market.
+.TP
+\fBsell\-item\fR \fIID\fR \fIPRICE_PER\fR
+Put an item up for sale on the market.
+
+.SH EXIT STATUS
+.TP
+\fB0\fR
+Success.
+.TP
+\fB1\fR
+An error occurred.
+
+.SH COPYRIGHT
+Licensed under the GNU General Public License version 3.0

@@ -1,0 +1,46 @@
+.TH farmctl 6
+
+.SH NAME
+farmctl \- manage farm services
+
+.SH SYNOPSIS
+\fBfarmctl\fR [\fIOPTION\fR...] \fIFILE\fR \fICOMMAND\fR \fIARGS\fR
+
+.SH DESCRIPTION
+Order and cancel services for a farm.
+
+.SH OPTIONS
+.TP
+\fB\-\-help\fR
+Displays the usage information.
+.TP
+\fB\-\-version\fR
+Displays the version and license information.
+
+.SH COMMANDS
+.TP
+\fBlist\fR [\fISERVICE\fR]
+List all services, or if a service is given, list all providers for that service.
+.TP
+\fBrestart\fR, \fBreorder\fR \fISERVICE\fR
+Reschedule a service.
+.TP
+\fBstart\fR, \fBorder\fR \fISERVICE\fR
+Buy and schedule a service.
+.TP
+\fBstatus\fR \fISERVICE\fR
+Show info about a service.
+.TP
+\fBstop\fR, \fBcancel\fR \fISERVICE\fR
+Cancel a service.
+
+.SH EXIT STATUS
+.TP
+\fB0\fR
+Success.
+.TP
+\fB1\fR
+An error occurred.
+
+.SH COPYRIGHT
+Licensed under the GNU General Public License version 3.0

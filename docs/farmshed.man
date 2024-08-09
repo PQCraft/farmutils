@@ -1,0 +1,61 @@
+.TH farmshed 6
+
+.SH NAME
+farmmrkt \- manage a farm's inventory
+
+.SH SYNOPSIS
+\fBfarmshed\fR [\fIOPTION\fR...] \fIFILE\fR \fICOMMAND\fR \fIARGS\fR
+
+.SH DESCRIPTION
+Manage and craft items.
+
+.SH OPTIONS
+.TP
+\fB\-\-help\fR
+Displays the usage information.
+.TP
+\fB\-\-version\fR
+Displays the version and license information.
+
+.SH COMMANDS
+.TP
+\fBcraft\fR \fINAME\fR[:\fICOUNT\fR]...
+Craft items.
+.TP
+\fBdelete\-crops\fR \fINAME\fR[:\fICOUNT\fR]...
+Throw out harvested crops.
+.TP
+\fBdelete\-items\fR \fIID\fR...
+Throw out items.
+.TP
+\fBdelete\-plants\fR \fINAME\fR[:\fICOUNT\fR]...
+Throw out plants.
+.TP
+\fBdelete\-seeds\fR \fINAME\fR[:\fICOUNT\fR]...
+Throw out seeds.
+.TP
+\fBlist\-crops\fR
+List harvested crops.
+.TP
+\fBlist\-items\fR
+List all items in the shed.
+.TP
+\fBlist\-plants\fR
+List all plants in the shed.
+.TP
+\fBlist\-seeds\fR
+List all seeds in the shed.
+.TP
+\fBrecipe\fR \fINAME\fR...
+Show the items required to craft items.
+
+.SH EXIT STATUS
+.TP
+\fB0\fR
+Success.
+.TP
+\fB1\fR
+An error occurred.
+
+.SH COPYRIGHT
+Licensed under the GNU General Public License version 3.0

@@ -1,0 +1,103 @@
+.TH farmmod 6
+
+.SH NAME
+farmmod \- modify a farm
+
+.SH SYNOPSIS
+\fBfarmmod\fR \fIOPTION\fR... \fIFILE\fR
+
+.SH DESCRIPTION
+Modify the plot contents or size of a farm.
+
+.SH OPTIONS
+.TP
+\fB\-\-help\fR
+Displays the usage information.
+.TP
+\fB\-\-version\fR
+Displays the version and license information.
+.TP
+\fB\-e\fR, \fB\-\-expand\fR \fIBY\fR
+Buy more land to expand the plot.
+.br
+\fIBY\fR should be \fICOLS\fR,\fIROWS\fR.
+.TP
+\fB\-f\fR, \fB\-\-force\fR
+If used with \fB\-h\fR or \fB\-r\fR, harvest or remove regardless of readiness.
+.br
+If used with \fB\-m\fR, move even if out of bounds or replacing a non\-empty tile.
+.br
+No effect for other actions.
+.TP
+\fB\-h\fR, \fB\-\-harvest\fR
+Harvest crops from crop tiles.
+.br
+Skips unready crops unless \fB\-f\fR is used.
+.TP
+\fB\-m\fR, \fB\-\-move\fR \fIBY\fR
+Move the contents of tiles by \fIBY\fR.
+.br
+Fails if the move places tiles out of bounds, or replaces non\-empty tiles.
+.br
+If used with \fB\-f\fR, out of bounds contents and the contents of non\-empty tiles will be removed.
+.TP
+\fB\-p\fR, \fB\-\-plant\fR \fINAME\fR
+Put plants in empty tiles.
+.TP
+\fB\-P\fR, \fB\-\-place\fR \fINAME\fR
+Put placeable items on empty tiles.
+.TP
+\fB\-r\fR, \fB\-\-remove\fR
+Remove crops and items from tiles.
+.br
+Asks for confirmation if a crop tile is ready for harvesting unless \fB\-f\fR is used.
+.TP
+\fB\-s\fR, \fB\-\-sow\fR \fINAME\fR
+Plant seeds in tilled tiles.
+.TP
+\fB\-S\fR, \fB\-\-shrink\fR \fIBY\fR
+Sell land to shrink the plot.
+.br
+\fIBY\fR should be \fICOLS\fR,\fIROWS\fR.
+.TP
+\fB\-t\fR, \fB\-\-tiles\fR \fILIST\fR
+Change tile selection.
+.br
+By default, all tiles are selected.
+.br
+\fILIST\fR should be a comma\-separated list of an alpha row and numeric column.
+For columns over Z, use multiple letters such as AA, AB, ... ZZ, AAA, AAB, etc.
+If just a row or column is provided, all the tiles in that row or column will be selected.
+.br
+To select all the tiles between 2 points, use '\-'.
+.br
+By default, the list is used as a whitelist.
+To make it into a blacklist, prepend '!'.
+Prepend individual entries with '\-' to remove them from the whitelist/blacklist.
+.br
+Examples:
+.RS
+.RS
+\-t A\-C,D2\-F4,\-E3,D5,E5
+.br
+\-t !A,\-4A,1\-3,5E
+.br
+\-\-tiles !A1\-C4
+.RE
+.RE
+.TP
+\fB\-u\fR, \fB\-\-use\fR \fINAME\fR[:\fICOUNT\fR]
+Use a useable item on applicable tiles.
+.br
+\fICOUNT\fR is how many passes to do (1 by default).
+
+.SH EXIT STATUS
+.TP
+\fB0\fR
+Success.
+.TP
+\fB1\fR
+An error occurred.
+
+.SH COPYRIGHT
+Licensed under the GNU General Public License version 3.0

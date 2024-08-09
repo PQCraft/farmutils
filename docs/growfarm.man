@@ -1,0 +1,48 @@
+.TH growfarm 6
+
+.SH NAME
+growfarm \- simulate a farm
+
+.SH SYNOPSIS
+\fBmkfarm\fR [\fIOPTION\fR...] \fIFILE\fR...
+
+.SH DESCRIPTION
+Simulate in\-game time passing (1d by default) for farms.
+
+.SH OPTIONS
+.TP
+\fB\-\-help\fR
+Displays the usage information.
+.TP
+\fB\-\-version\fR
+Displays the version and license information.
+.TP
+\fB\-t\fR, \fB\-\-time\fR [\fIDAYS\fRd][\fIHOURS\fRh][\fIMINUTES\fRm]
+Simulate an amount of in\-game time passing.
+.br
+At least one unit must be provided.
+.br
+Cannot be used with \fB\-u\fR.
+.TP
+\fB\-u\fR, \fB\-\-until\fR [\fIDAY\fRd][\fIHOUR\fRh][\fIMINUTE\fRm]
+Simulate up to the given in\-game time.
+.br
+At least one unit must be provided.
+.br
+Cannot be used with \fB\-t\fR.
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Enable verbose mode.
+.br
+Passing this option twice will increase the verbosity.
+
+.SH EXIT STATUS
+.TP
+\fB0\fR
+Success.
+.TP
+\fB1\fR
+An error occurred.
+
+.SH COPYRIGHT
+Licensed under the GNU General Public License version 3.0

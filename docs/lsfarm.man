@@ -1,0 +1,111 @@
+.TH lsfarm 6
+
+.SH NAME
+lsfarm \- list farm contents
+
+.SH SYNOPSIS
+\fBlsfarm\fR [\fIOPTION\fR...] \fIFILE\fR
+
+.SH DESCRIPTION
+List information about a farm's status, plot contents, or shed contents.
+
+.SH OPTIONS
+.TP
+\fB\-\-help\fR
+Displays the usage information.
+.TP
+\fB\-\-version\fR
+Displays the version and license information.
+.TP
+\fB\-C\fR, \fB\-\-color\fR
+Use color escape codes.
+.TP
+\fB\-i\fR, \fB\-\-shed\fR[=\fIWHAT\fR]
+Show the contents of the shed.
+.br
+Optionally provide \fIWHAT\fR containing one or more of the following:
+.RS
+.TP
+\fBc\fR
+Crops
+.TP
+\fBi\fR
+Items
+.TP
+\fBp\fR
+Plants
+.TP
+\fBs\fR
+Seeds
+.RE
+.TP
+\fB\-I\fR, \fB\-\-no\-shed\fR
+Do not show the contents of the shed (default).
+.TP
+\fB\-l\fR, \fB\-\-list\fR
+Output plot information in a list instead of a diagram.
+.TP
+\fB\-s\fR, \fB\-\-status\fR[=\fIWHAT\fR]
+Show the status of the farm (default).
+.br
+Optionally provide \fIWHAT\fR containing one or more of the following:
+.RS
+.TP
+\fBh\fR
+Humidity
+.TP
+\fBm\fR
+Money
+.TP
+\fBs\fR
+Plot size
+.TP
+\fBt\fR
+Time
+.TP
+\fBT\fR
+Temperature
+.TP
+\fBw\fR
+Weather
+.RE
+.TP
+\fB\-S\fR, \fB\-\-no\-status\fR
+Do not show the status of the farm.
+.TP
+\fB\-t\fR, \fB\-\-tiles\fR \fILIST\fR
+Change tile selection.
+.br
+By default, all tiles are selected.
+.br
+\fILIST\fR should be a comma\-separated list of an alpha row and numeric column.
+For columns over Z, use multiple letters such as AA, AB, ... ZZ, AAA, AAB, etc.
+If just a row or column is provided, all the tiles in that row or column will be selected.
+.br
+To select all the tiles between 2 points, use '\-'.
+.br
+By default, the list is used as a whitelist.
+To make it into a blacklist, prepend '!'.
+Prepend individual entries with '\-' to remove them from the whitelist/blacklist.
+.br
+Examples:
+.RS
+.RS
+\-t A\-C,D2\-F4,\-E3,D5,E5
+.br
+\-t !A,\-4A,1\-3,5E
+.br
+\-\-tiles !A1\-C4
+.RE
+.RE
+
+.SH EXIT STATUS
+.TP
+\fB0\fR
+Success.
+.TP
+\fB1\fR
+An error occurred.
+
+.SH COPYRIGHT
+Licensed under the GNU General Public License version 3.0
