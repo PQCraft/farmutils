@@ -1,7 +1,7 @@
 .TH farmshed 6
 
 .SH NAME
-farmmrkt \- manage a farm's inventory
+farmshed \- manage a farm's inventory
 
 .SH SYNOPSIS
 \fBfarmshed\fR [\fIOPTION\fR...] \fIFILE\fR \fICOMMAND\fR \fIARGS\fR

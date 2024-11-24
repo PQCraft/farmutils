@@ -37,6 +37,8 @@ Skips unready crops unless \fB\-f\fR is used.
 \fB\-m\fR, \fB\-\-move\fR \fIBY\fR
 Move the contents of tiles by \fIBY\fR.
 .br
+\fIBY\fR should be \fICOLS\fR,\fIROWS\fR.
+.br
 Fails if the move places tiles out of bounds, or replaces non\-empty tiles.
 .br
 If used with \fB\-f\fR, out of bounds contents and the contents of non\-empty tiles will be removed.

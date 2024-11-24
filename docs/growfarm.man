@@ -4,7 +4,7 @@
 growfarm \- simulate a farm
 
 .SH SYNOPSIS
-\fBmkfarm\fR [\fIOPTION\fR...] \fIFILE\fR...
+\fBgrowfarm\fR [\fIOPTION\fR...] \fIFILE\fR...
 
 .SH DESCRIPTION
 Simulate in\-game time passing (1d by default) for farms.
